@@ -15,19 +15,19 @@ export default function DetailScreen() {
 			{/*<Button icon="login-variant" mode="outlined" buttonColor="#60626e" textColor="white" onPress={() => console.log('Pressed')}>*/}
 			<View style={styles.title}>
 				<Button icon="login-variant" textColor="#14aca3"></Button>
-				<Button textColor="white" style={{ marginLeft: 0 }}>
-					Login in to your account
+				<Button textColor="white" >
+					<Text style={styles.titleText}>Login in to your account</Text>
 				</Button>
 			</View>
 			<View style={styles.formContainter}>
-				<TextInput label='username' style={styles.input}></TextInput>
-				<TextInput label='password' style={styles.inputTwo}></TextInput>
+				<TextInput label='username' mode='outlined' activeOutlineColor='#3a3b42' style={styles.input}></TextInput>
+				<TextInput label='password' mode='outlined' activeOutlineColor='#3a3b42' style={styles.inputTwo}></TextInput>
 				<Button style={styles.loginBtn} textColor='#3a3b42'>Login</Button>
 			</View>
 			<Button buttonColor='#41424a' textColor='white' style={styles.altLink}>
 				New to us? <Text style={styles.blueAltLink}>Sign Up</Text>
 			</Button>
-		</View>
+		</View >
 	)
 }
 
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
 		marginRight: 40,
 		marginBottom: 0,
 		marginTop: 40,
+		paddingTop: 10,
 		borderRadius: 5,
 	},
 	inputTwo: {
@@ -58,6 +59,7 @@ const styles = StyleSheet.create({
 		marginRight: 40,
 		marginBottom: 0,
 		marginTop: 20,
+		paddingTop: 10,
 		borderRadius: 5
 	},
 	loginBtn: {
@@ -77,7 +79,11 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		flexDirection: 'row',
-		alignSelf: 'center'
+		alignSelf: 'center',
+		padding: 30,
+	},
+	titleText: {
+		fontSize: 20
 	},
 	tinyLogo: {
 		alignSelf: 'center',
