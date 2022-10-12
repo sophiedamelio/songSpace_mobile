@@ -1,31 +1,36 @@
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { Button, TextInput } from 'react-native-paper'
+import CustomHeader from './Header';
 
+// this is the login screen....
 
 export default function DetailScreen() {
 	return (
-		<View style={styles.container}>
-			<Image
-				style={styles.tinyLogo}
-				source={{
-					uri: 'https://i.imgur.com/Yu3B0dN.png',
-				}}
-			/>
-			<View style={styles.title}>
-				<Button icon="login-variant" textColor="#14aca3"></Button>
-				<Button textColor="white" >
-					<Text style={styles.titleText}>Login in to your account</Text>
+		<View>
+			<CustomHeader />
+			<View style={styles.container}>
+				<Image
+					style={styles.tinyLogo}
+					source={{
+						uri: 'https://i.imgur.com/Yu3B0dN.png',
+					}}
+				/>
+				<View style={styles.title}>
+					<Button icon="login-variant" textColor="#14aca3"></Button>
+					<Button textColor="white" >
+						<Text style={styles.titleText}>Login in to your account</Text>
+					</Button>
+				</View>
+				<View style={styles.formContainter}>
+					<TextInput label='username' mode='outlined' activeOutlineColor='#3a3b42' style={styles.input}></TextInput>
+					<TextInput label='password' mode='outlined' activeOutlineColor='#3a3b42' style={styles.inputTwo}></TextInput>
+					<Button style={styles.loginBtn} textColor='#3a3b42'>Login</Button>
+				</View>
+				<Button buttonColor='#41424a' textColor='white' style={styles.altLink}>
+					New to us? <Text style={styles.blueAltLink}>Signup</Text>
 				</Button>
-			</View>
-			<View style={styles.formContainter}>
-				<TextInput label='username' mode='outlined' activeOutlineColor='#3a3b42' style={styles.input}></TextInput>
-				<TextInput label='password' mode='outlined' activeOutlineColor='#3a3b42' style={styles.inputTwo}></TextInput>
-				<Button style={styles.loginBtn} textColor='#3a3b42'>Login</Button>
-			</View>
-			<Button buttonColor='#41424a' textColor='white' style={styles.altLink}>
-				New to us? <Text style={styles.blueAltLink}>Signup</Text>
-			</Button>
-		</View >
+			</View >
+		</View>
 	)
 }
 

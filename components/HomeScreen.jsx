@@ -5,6 +5,8 @@ import { Button, TextInput } from 'react-native-paper'
 
 // this is signup screen right now...
 
+// make the bottom menu bar not sticky when keyboard is open
+
 export default function HomeScreen() {
 	return (
 		<View style={styles.container}>
